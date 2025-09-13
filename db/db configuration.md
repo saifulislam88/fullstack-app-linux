@@ -49,5 +49,14 @@ sudo systemctl restart mariadb
 ```
 
 
+- sudo apt -y install mariadb-client
+- mysql -h <DB_SERVER_IP> -u dipti -p
 
+SHOW DATABASES;
+USE dipti_portal;
+SHOW TABLES;
+SELECT NOW();
+
+mysql -h <DB_SERVER_IP> -u dipti -p'changeme' -e "SHOW DATABASES;"
+mysql -h <DB_SERVER_IP> -u dipti -p'changeme' -e "USE dipti_portal; SHOW TABLES;"
 mysql -udipti -p -h 192.168.1.104 -e "SELECT id,name,email FROM dipti_portal.students ORDER BY id DESC LIMIT 5
