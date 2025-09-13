@@ -117,6 +117,9 @@ vim /etc/keepalived/keepalived.conf
 ```
 
 - lb1
+```sh
+vim /etc/keepalived/keepalived.conf
+```
 ```ini
 vrrp_instance VI_1 {
     state MASTER
@@ -135,6 +138,9 @@ vrrp_instance VI_1 {
 ```
 
 - lb2
+```sh
+vim /etc/keepalived/keepalived.conf
+```
 ```ini
 vrrp_instance VI_1 {
     state BACKUP
