@@ -26,12 +26,12 @@ sudo mysql_secure_installation
 ```bash
 mkdir /opt/dipti/
 cd /opt/dipti/
-wget https://raw.githubusercontent.com/saifulislam88/fullstack-app-linux/main/db/schema.sql -O schema.sql
+git clone https://github.com/saifulislam88/fullstack-app-linux.git
 ```
 ### 4. Load Schema into MariaDB
 
 ```bash
-sudo mysql -uroot -p < /opt/dipti/schema.sql
+sudo mysql -uroot -p < /opt/dipti/fullstack-app-linux/db/schema.sql
 ```
 ### 5. Create Application User
 Create a dedicated database user with full privileges on the project database:
