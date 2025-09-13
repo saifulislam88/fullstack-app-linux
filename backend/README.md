@@ -13,15 +13,15 @@ git clone https://github.com/saifulislam88/fullstack-app-linux.git
 cd /opt/dipti/fullstack-app-linux/backend/
 python3 -m venv venv
 source venv/bin/activate
-pip install -r python/requirements.txt
+pip install -r requirements.txt
 ```
 
 ```bash
-cp /opt/dipti/fullstack-app-linux/backend/python/.env.example /opt/dipti/fullstack-app-linux/backend/python/.env
+cp /opt/dipti/fullstack-app-linux/backend/.env.example /opt/dipti/fullstack-app-linux/backend/.env
 ```
 
 ```bash
-vim /opt/dipti/fullstack-app-linux/backend/python/.env
+vim /opt/dipti/fullstack-app-linux/backend/.env
 ```
 
 ```bash
