@@ -47,3 +47,7 @@ If your backend is running remotely, bind MariaDB to all interfaces:
 sudo sed -i 's/^bind-address.*/bind-address = 0.0.0.0/' /etc/mysql/mariadb.conf.d/50-server.cnf
 sudo systemctl restart mariadb
 ```
+
+
+
+mysql -udipti -p -h 192.168.1.104 -e "SELECT id,name,email FROM dipti_portal.students ORDER BY id DESC LIMIT 5
