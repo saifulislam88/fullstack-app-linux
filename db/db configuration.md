@@ -35,11 +35,11 @@ sudo mysql -uroot -p < /opt/dipti/schema.sql
 ```
 ### 5. Create Application User
 Create a dedicated database user with full privileges on the project database:
-
+```bash
 sudo mysql -uroot -p -e "CREATE USER 'dipti'@'%' IDENTIFIED BY 'changeme'; \
 GRANT ALL PRIVILEGES ON dipti_portal.* TO 'dipti'@'%'; \
 FLUSH PRIVILEGES;"
-
+```
 ### 6. Allow Remote Connections
 If your backend is running remotely, bind MariaDB to all interfaces:
 
