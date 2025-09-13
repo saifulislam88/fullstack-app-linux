@@ -108,4 +108,46 @@ listen stats
     stats auth admin:admin123
 ```
 
-- **Update Haproxy configuration**
+- **Update Keepalived configuration**
+```sh
+cp /etc/keepalived/keepalived.conf /etc/keepalived/keepalived.conf_ori_backup
+```
+```sh
+vim /etc/keepalived/keepalived.conf
+```
+
+- lb1
+```ini
+vrrp_instance VI_1 {
+    state MASTER
+    interface ens33  # Replace with your actual NIC (e.g., eth0, ens160)
+    virtual_router_id 51
+    priority 100
+    advert_int 1
+    authentication {
+        auth_type PASS
+        auth_pass 1111
+    }
+    virtual_ipaddress {
+        10.0.0.11  # # Replace with your actual vip
+    }
+}
+```
+
+- lb2
+```ini
+vrrp_instance VI_1 {
+    state BACKUP
+    interface ens33  # Replace with your actual NIC (e.g., eth0, ens160)
+    virtual_router_id 51
+    priority 99
+    advert_int 1
+    authentication {
+        auth_type PASS
+        auth_pass 1111
+    }
+    virtual_ipaddress {
+        10.0.0.11  # # Replace with your actual vip
+    }
+}
+```
