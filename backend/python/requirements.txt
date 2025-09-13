@@ -1,0 +1,10 @@
+fastapi==0.111.0
+uvicorn[standard]==0.30.0
+SQLAlchemy==2.0.30
+pymysql==1.1.1
+python-dotenv==1.0.1
+passlib[bcrypt]==1.7.4
+PyJWT==2.8.0
+pydantic==2.7.1
+pillow==10.3.0
+python-multipart==0.0.9
