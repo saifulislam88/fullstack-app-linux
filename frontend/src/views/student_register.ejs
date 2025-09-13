@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title>Student Register</title></head>
+<body>
+  <h1>Student Register</h1>
+  <% if (error) { %>
+    <p style="color:red"><%= error %></p>
+  <% } %>
+  <form method="POST" action="/student/register" enctype="multipart/form-data">
+    <input name="name" placeholder="Name" required /><br/>
+    <input name="institute" placeholder="Institute" required /><br/>
+    <input name="batch" placeholder="Batch" required /><br/>
+    <input name="course_name" placeholder="Course Name" required /><br/>
+    <input name="module" placeholder="Module" required /><br/>
+    <input name="email" type="email" placeholder="Email" required /><br/>
+    <input name="password" type="password" placeholder="Password" required /><br/>
+    <input name="photo" type="file" accept="image/png, image/jpeg" required /><br/>
+    <button type="submit">Register</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,2 @@
+<% function layout(name){ include(name) } %>
+<section class="card"><h2>Student Login</h2><% if (error) { %><div class="error"><%= error %></div><% } %><form method="POST" action="/student/login"><label>Email<input type="email" name="email" required></label><label>Password<input type="password" name="password" required></label><button class="btn" type="submit">Login</button></form></section>

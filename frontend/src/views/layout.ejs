@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title><%= title %> - DIPTI Student Portal</title><link rel="stylesheet" href="/static/styles.css"></head>
+<body>
+<header class="header">
+  <h1>DIPTI Student Portal</h1>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/student/register">Register</a>
+    <% if (student) { %><a href="/student/profile">My Profile</a><a href="/student/logout">Logout</a><% } else { %><a href="/student/login">Student Login</a><% } %>
+    <% if (admin) { %><a href="/submit">Admin Submit</a><a href="/logout">Admin Logout</a><% } else { %><a href="/login">Admin</a><% } %>
+  </nav>
+</header>
+<main class="container"><%- body %></main>
+<footer class="footer"><p>&copy; <span id="year"></span> DIPTI</p></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body></html>

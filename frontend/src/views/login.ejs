@@ -1,0 +1,2 @@
+<% function layout(name){ include(name) } %>
+<section class='card'><h2>Admin Login</h2><% if (error) { %><div class='error'><%= error %></div><% } %><form method='POST' action='/login'><label>Username<input name='username' required></label><label>Password<input type='password' name='password' required></label><button class='btn' type='submit'>Login</button></form></section>
