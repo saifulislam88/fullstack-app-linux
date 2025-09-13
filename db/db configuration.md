@@ -55,14 +55,15 @@ sudo apt -y install mariadb-client
 ```
 ```bash
 mysql -h <DB_SERVER_IP> -u dipti -p
-
+```
 ```bash
 SHOW DATABASES;
 USE dipti_portal;
 SHOW TABLES;
 SELECT NOW();
-
+```
 ```bash
 mysql -h <DB_SERVER_IP> -u dipti -p'changeme' -e "SHOW DATABASES;"
 mysql -h <DB_SERVER_IP> -u dipti -p'changeme' -e "USE dipti_portal; SHOW TABLES;"
 mysql -udipti -p -h 192.168.1.104 -e "SELECT id,name,email FROM dipti_portal.students ORDER BY id DESC LIMIT 5
+```
