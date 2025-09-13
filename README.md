@@ -56,6 +56,8 @@ chmod 600 /etc/haproxy/certs/haproxy.pem
 
 ```sh
 cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg_ori_backup
+```
+```sh
 vim /etc/haproxy/haproxy.cfg
 ```
 
@@ -104,5 +106,6 @@ listen stats
     stats uri /stats
     stats refresh 10s
     stats auth admin:admin123
-
 ```
+
+- **Update Haproxy configuration**
