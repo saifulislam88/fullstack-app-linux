@@ -20,7 +20,9 @@ pip install -r python/requirements.txt
 cp /opt/dipti/fullstack-app-linux/backend/python/.env.example /opt/dipti/fullstack-app-linux/backend/python/.env
 ```
 
-`vim /opt/dipti/fullstack-app-linux/backend/python/.env`
+```bash
+vim /opt/dipti/fullstack-app-linux/backend/python/.env
+```
 
 ```bash
 DB_HOST=192.168.1.104
