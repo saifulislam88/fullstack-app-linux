@@ -54,6 +54,11 @@ chmod 600 /etc/haproxy/certs/haproxy.pem
 ```
 - **Update Haproxy configuration**
 
+```sh
+cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg_ori_backup
+vim /etc/haproxy/haproxy.cfg
+```
+
 ```bash
 
 # Global settings
