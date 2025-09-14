@@ -1,6 +1,6 @@
 ### NFS Server Installation
 
-```bash
+```sh
 sudo apt -y install nfs-kernel-server
 sudo mkdir -p /srv/dipti-uploads/students
 sudo chown -R www-data:www-data /srv/dipti-uploads   #sudo chown -R nobody:nogroup /srv/dipti-uploads
