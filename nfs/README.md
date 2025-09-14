@@ -1,4 +1,4 @@
-### NFS Server Installation
+## NFS Server Installation
 
 ```sh
 sudo apt -y install nfs-kernel-server
