@@ -35,23 +35,40 @@ UPLOAD_DIR=/opt/dipti/fullstack-app-linux/uploads          # this is the NFS mou
 ```
 
 mkdir -p /opt/dipti/fullstack-app-linux/uploads
-sudo chown -R www-data:www-data /opt/dipti/fullstack-app-linux/backend /opt/dipti/fullstack-app-linux/uploads
+sudo chown -R www-data:www-data /opt/dipti/fullstack-app-linux/backend
 
 
 ### nfs mount in all backend nodes
 
+```bash
 sudo apt -y install nfs-common
 sudo mount -t nfs 10.0.0.21:/srv/dipti-uploads /opt/dipti/fullstack-app-linux/uploads
-echo "10.0.0.21:/srv/dipti-uploads /opt/dipti/fullstack-app-linux/uploads nfs defaults,_netdev 0 0" | sudo tee -a /etc/fstab
+#for permanent mount
+#echo "10.0.0.21:/srv/dipti-uploads /opt/dipti/fullstack-app-linux/uploads nfs defaults,_netdev 0 0" | sudo tee -a /etc/fstab
 sudo mount -a
-sudo mkdir -p /opt/dipti/uploads/students
+df -hT
+sudo mkdir -p /opt/dipti/fullstack-app-linux/uploads/students
 sudo chown -R www-data:www-data /opt/dipti/uploads
+```
 
 
-
-sudo mount -t nfs 10.0.0.21:/srv/dipti-uploads /opt/dipti/fullstack-app-linux/uploads
-
-sudo cp /opt/dipti/dipti-portal-three-tier-v2/systemd/dipti-backend.service /etc/systemd/system/
 sudo systemctl daemon-reload
 sudo systemctl enable --now dipti-backend
+
+
+[Unit]
+Description=DIPTI Backend (FastAPI v2)
+After=network.target mariadb.service
+
+[Service]
+WorkingDirectory=/opt/dipti/backend/python
+Environment="PYTHONPATH=/opt/dipti/backend"
+EnvironmentFile=/opt/dipti/backend/python/.env
+ExecStart=/opt/dipti/backend/venv/bin/uvicorn app:app --host 0.0.0.0 --port 8000
+User=www-data
+Group=www-data
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
 
