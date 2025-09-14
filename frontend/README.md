@@ -7,6 +7,7 @@ sudo apt -y install nodejs nginx
 
 ```bash
 sudo mkdir -p /opt/dipti/
+cd /opt/dipti/
 git clone https://github.com/saifulislam88/fullstack-app-linux.git
 cd /opt/dipti/fullstack-app-linux/frontend/
 npm install
