@@ -2,8 +2,7 @@
 
 This guide provides a **step-by-step setup** of a 6-VM/server architecture with **7 IP addresses** for a highly available web application stack.  
 
-![Brac TMP v2-Service_Port_IP](https://github.com/user-attachments/assets/aa10433c-c80a-40e0-8348-20c95b524152)
-
+<img src="https://github.com/user-attachments/assets/aa10433c-c80a-40e0-8348-20c95b524152" alt="Signature" height="300" width="400"/>
 
 ### 📌 Infrastructure Plan
 
