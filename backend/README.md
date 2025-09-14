@@ -51,24 +51,31 @@ sudo mkdir -p /opt/dipti/fullstack-app-linux/uploads/students
 sudo chown -R www-data:www-data /opt/dipti/uploads
 ```
 
+## Daemon service creation for frontend
+```bash
+vim /etc/systemd/system/dipti-backend.service
+```
 
-sudo systemctl daemon-reload
-sudo systemctl enable --now dipti-backend
 
-
+```bash
 [Unit]
 Description=DIPTI Backend (FastAPI v2)
 After=network.target mariadb.service
 
 [Service]
-WorkingDirectory=/opt/dipti/backend/python
-Environment="PYTHONPATH=/opt/dipti/backend"
-EnvironmentFile=/opt/dipti/backend/python/.env
-ExecStart=/opt/dipti/backend/venv/bin/uvicorn app:app --host 0.0.0.0 --port 8000
+WorkingDirectory=/opt/dipti/fullstack-app-linux/backend/
+Environment="PYTHONPATH=/opt/dipti/fullstack-app-linux/backend/"
+EnvironmentFile=/opt/dipti/fullstack-app-linux/backend/.env
+ExecStart=/opt/dipti/fullstack-app-linux/backend/venv/bin/uvicorn app:app --host 0.0.0.0 --port 8000
 User=www-data
 Group=www-data
 Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
+```
 
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable --now dipti-backend
+```
