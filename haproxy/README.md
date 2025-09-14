@@ -114,3 +114,8 @@ vrrp_instance VI_1 {
     }
 }
 ```
+```sh
+sudo systemctl restart haproxy keepalived
+sudo systemctl status haproxy keepalived
+```
+
