@@ -38,14 +38,18 @@ mkdir -p /opt/dipti/fullstack-app-linux/uploads
 sudo chown -R www-data:www-data /opt/dipti/fullstack-app-linux/backend /opt/dipti/fullstack-app-linux/uploads
 
 
+### nfs mount in all backend nodes
+
 sudo apt -y install nfs-common
-sudo mkdir -p /opt/dipti/uploads
-echo "10.0.0.21:/srv/dipti-uploads /opt/dipti/uploads nfs defaults,_netdev 0 0" | sudo tee -a /etc/fstab
+sudo mount -t nfs 10.0.0.21:/srv/dipti-uploads /opt/dipti/fullstack-app-linux/uploads
+echo "10.0.0.21:/srv/dipti-uploads /opt/dipti/fullstack-app-linux/uploads nfs defaults,_netdev 0 0" | sudo tee -a /etc/fstab
 sudo mount -a
 sudo mkdir -p /opt/dipti/uploads/students
 sudo chown -R www-data:www-data /opt/dipti/uploads
 
 
+
+sudo mount -t nfs 10.0.0.21:/srv/dipti-uploads /opt/dipti/fullstack-app-linux/uploads
 
 sudo cp /opt/dipti/dipti-portal-three-tier-v2/systemd/dipti-backend.service /etc/systemd/system/
 sudo systemctl daemon-reload
