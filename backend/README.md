@@ -42,7 +42,7 @@ sudo chown -R www-data:www-data /opt/dipti/fullstack-app-linux/backend
 
 ```bash
 sudo apt -y install nfs-common
-sudo mount -t nfs 10.0.0.21:/srv/dipti-uploads /opt/dipti/fullstack-app-linux/uploads
+sudo mount -t nfs 192.168.1.17:/srv/dipti-uploads /opt/dipti/fullstack-app-linux/uploads
 #for permanent mount
 #echo "10.0.0.21:/srv/dipti-uploads /opt/dipti/fullstack-app-linux/uploads nfs defaults,_netdev 0 0" | sudo tee -a /etc/fstab
 sudo mount -a
