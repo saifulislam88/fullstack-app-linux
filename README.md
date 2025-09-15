@@ -8,13 +8,13 @@ This guide provides a **step-by-step setup** of a 6-VM/server architecture with 
 
 | Role                   | Hostname  | IP Address | Notes |
 |-------------------------|-----------|------------|-------|
-| Load Balancer (HAProxy) | lb1       | 10.0.0.9   | Primary HAProxy node |
-| Load Balancer (HAProxy) | lb2       | 10.0.0.10  | Secondary HAProxy node |
-| Virtual IP (VIP)        | lb-vip    | 10.0.0.11  | Shared VIP for HAProxy |
-| App Server #1           | app1      | 10.0.0.12  | Node.js frontend + FastAPI backend |
-| App Server #2           | app2      | 10.0.0.13  | Node.js frontend + FastAPI backend |
-| Database (MariaDB)      | db1       | 10.0.0.14  | MariaDB server |
-| NFS Storage             | nfs1      | 10.0.0.15  | NFS shared storage |
+| Load Balancer (HAProxy) | lb1       | 192.168.1.11   | Primary HAProxy node |
+| Load Balancer (HAProxy) | lb2       | 192.168.1.12  | Secondary HAProxy node |
+| Virtual IP (VIP)        | lb-vip    | 192.168.1.13  | Shared VIP for HAProxy |
+| App Server #1           | app1      | 192.168.1.14  | Node.js frontend + FastAPI backend |
+| App Server #2           | app2      | 192.168.1.15  | Node.js frontend + FastAPI backend |
+| Database (MariaDB)      | db1       | 192.168.1.16  | MariaDB server |
+| NFS Storage             | nfs1      | 192.168.1.17 | NFS shared storage |
 
 ⚠️⚠️⚠️ For **lab/testing**, you can run all components on **one VM** and point `.env` to `127.0.0.1`.
 
