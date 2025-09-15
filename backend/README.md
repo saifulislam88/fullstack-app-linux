@@ -25,7 +25,7 @@ vim /opt/dipti/fullstack-app-linux/backend/.env
 ```
 
 ```bash
-DB_HOST=192.168.1.104
+DB_HOST=192.168.1.16
 DB_PORT=3306
 DB_NAME=dipti_portal
 DB_USER=dipti
