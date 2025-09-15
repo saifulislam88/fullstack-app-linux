@@ -1,7 +1,7 @@
 
 #### ⚙️ Step 3: Setup HAProxy (lb1 + lb2)
 
-- **Install HAProxy + Keepalived on lb1 (10.0.0.9) and lb2 (10.0.0.10):**
+- **Install HAProxy + Keepalived on lb1 (192.168.1.11) and lb2 (192.168.1.12):**
 
 ```sh
 sudo apt -y install haproxy keepalived openssl
@@ -52,8 +52,8 @@ frontend http_front
 # Backend configuration
 backend app_servers
     balance roundrobin
-    server app1 10.0.0.12:80 check
-    server app2 10.0.0.12:80 check
+    server app1 192.168.1.14:8080 check
+    server app2 192.168.1.15:8080 check
 
 # Optional: stats interface
 listen stats
