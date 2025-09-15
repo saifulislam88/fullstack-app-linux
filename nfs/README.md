@@ -1,5 +1,5 @@
 ## NFS Server Installation
-- IP `10.0.0.15`	of NFS shared storage
+- IP `192.168.1.17`	of NFS shared storage
 
 ```sh
 sudo apt -y install nfs-kernel-server
