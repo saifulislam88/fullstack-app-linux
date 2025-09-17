@@ -31,12 +31,13 @@ DB_NAME=dipti_portal
 DB_USER=dipti
 DB_PASSWORD=changeme
 JWT_SECRET=9b15f2b6b5e08df0c2b8f77a6cfc3f83f55d28b4db74cfb5a1d8c3eaf2c98271
-UPLOAD_DIR=/opt/dipti/fullstack-app-linux/uploads          # this is the NFS mount path
+UPLOAD_DIR=/opt/dipti/fullstack-app-linux/uploads
 ```
 
+```bash
 mkdir -p /opt/dipti/fullstack-app-linux/uploads
 sudo chown -R www-data:www-data /opt/dipti/fullstack-app-linux/backend
-
+```
 
 ### nfs mount in all backend nodes
 
@@ -66,7 +67,7 @@ After=network.target mariadb.service
 WorkingDirectory=/opt/dipti/fullstack-app-linux/backend/
 Environment="PYTHONPATH=/opt/dipti/fullstack-app-linux/backend/"
 EnvironmentFile=/opt/dipti/fullstack-app-linux/backend/.env
-ExecStart=/opt/dipti/fullstack-app-linux/backend/venv/bin/uvicorn app:app --host 0.0.0.0 --port 8000
+ExecStart=/opt/dipti/fullstack-app-linux/backend/venv/bin/python -m uvicorn app:app --host 0.0.0.0 --port 8000
 User=www-data
 Group=www-data
 Restart=on-failure
