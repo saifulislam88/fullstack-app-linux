@@ -9,8 +9,8 @@ from passlib.hash import bcrypt
 import jwt
 from PIL import Image
 
-from .database import SessionLocal, Base, engine
-from .models import User, StudentSubmission, Student
+from database import SessionLocal, Base, engine
+from models import User, StudentSubmission, Student
 
 JWT_SECRET = os.getenv("JWT_SECRET", "change_this_secret")
 UPLOAD_DIR = os.getenv("UPLOAD_DIR", "/opt/dipti/uploads")
