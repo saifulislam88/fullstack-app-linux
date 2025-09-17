@@ -49,10 +49,9 @@ sudo mount -t nfs 192.168.1.17:/srv/dipti-uploads /opt/dipti/fullstack-app-linux
 sudo mount -a
 df -hT
 sudo mkdir -p /opt/dipti/fullstack-app-linux/uploads/students
-sudo chown -R www-data:www-data /opt/dipti/uploads
 ```
 
-## Daemon service creation for frontend
+## Daemon service creation for backend
 ```bash
 vim /etc/systemd/system/dipti-backend.service
 ```
