@@ -2,7 +2,8 @@
 
 This guide provides a **step-by-step setup** of a 6-VM/server architecture with **7 IP addresses** for a highly available web application stack.  
 
-<img src="https://github.com/user-attachments/assets/aa10433c-c80a-40e0-8348-20c95b524152" alt="Signature" height="500" width="600"/>
+<img src="https://github.com/user-attachments/assets/8cb6c392-9a8b-41fe-ac58-5e399eb86487" alt="Signature" height="600" width="700"/>
+
 
 ### 📌 Infrastructure Plan
 
