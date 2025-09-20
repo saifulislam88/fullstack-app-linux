@@ -1,8 +1,8 @@
 ## HA microservice architecture–based Linux learning deployment project on Ubuntu 24.04
 
-This guide provides a **step-by-step setup** of a 6-VM/server architecture with **7 IP addresses** for a highly available web application stack.  
+This guide provides a **step-by-step setup** of a 6-VM/server architecture with **7 IP addresses** for a highly available web application stack. 
 
-<img src="https://github.com/user-attachments/assets/8cb6c392-9a8b-41fe-ac58-5e399eb86487" alt="Signature" height="600" width="700"/>
+<img src="https://github.com/user-attachments/assets/8bd002e5-d0f3-4e57-9ec3-11eafa1553cf" alt="Signature" height="600" width="700"/>
 
 
 ### 📌 Infrastructure Plan
