@@ -1,4 +1,4 @@
-#### Highly available microservice architecture–based Linux learning deployment project on Ubuntu 24.04 | Traditional method
+### Highly available microservice architecture–based Linux learning deployment project on Ubuntu 24.04
 
 This guide provides a **step-by-step setup** of a 6-VM/server architecture with **7 IP addresses** for a highly available web application stack.  
 
